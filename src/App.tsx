@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Button from "./components/Button/Button.tsx";
+import Input from "./components/Input/Input.tsx";
+import Hero from "./components/Hero/Hero.tsx";
+import Footer from "./components/Footer/Footer.tsx";
+import Main from "./components/Main/Main.tsx";
+import Products from "./components/Products/Products.tsx";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <Hero>
+                <p>Any products from famous brands<br/> with worldwide delivery</p>
+                <p>We sell smartphones, laptops, clothes, shoes<br/> and many other products at low prices</p>
+                <p className='back-text'>Goods4you</p>
+                <Button>Go to shopping</Button>
+            </Hero>
+            <Main>
+                <h2>Catalog</h2>
+                <Input>Search by title</Input>
+                <Button>Search</Button>
+                <Products>
+                    <img src='../images/image.png' alt='Изображение кроссовок'/>
+                    <Button>Show more</Button>
+                </Products>
+            </Main>
+            <Hero>
+                FAQ
+            </Hero>
+            <Footer>
+                <p>Catalog</p>
+                <p>FAQ</p>
+            </Footer>
+        </>
+    );
 }
 
-export default App
+export default App;

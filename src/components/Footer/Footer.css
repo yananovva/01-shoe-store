@@ -1,0 +1,15 @@
+.footer {
+    background: #444B58;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    max-width: 1440px;
+    height: 80px;
+}
+
+.footer:active {
+    color: #C4C4C4;
+    text-decoration: underline;
+}

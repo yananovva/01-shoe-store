@@ -1,0 +1,13 @@
+.products {
+    max-width: 1181px;
+    height: 1133px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.products img {
+    width: 100%;
+    height: auto;
+}
