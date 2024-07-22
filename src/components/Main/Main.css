@@ -1,5 +1,11 @@
 .main {
     background: #FFFFFF;
     height: 1540px;
-    max-width: 1440px;
+    width: 100%;
+}
+
+.main__search {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
