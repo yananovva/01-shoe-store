@@ -16,7 +16,7 @@ function App() {
                 <Input/>
                 <Button/>
                 <Products>
-                    <img src='../images/image.png' alt='Изображение кроссовок'/>
+                    <img src='../images/image-shoe.png' alt='Изображение кроссовок'/>
                     <Button/>
                 </Products>
             </Main>

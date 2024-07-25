@@ -7,16 +7,16 @@ function HeaderHero() {
         <div className='hero header_hero'>
             <div className='header__navigation'>
                 <a href='' className='logo'>Goods4you</a>
-                <section className='menu'>
-                    <div className='menu__link'>
-                        <a href={''}>Catalog</a>
-                        <a href={''}>FAQ</a>
-                        <a href={''}>Cart</a>
-                    </div>
+                <nav className='menu'>
+                    <ul className='menu__link'>
+                        <li><a href={''}>Catalog</a></li>
+                        <li><a href={''}>FAQ</a></li>
+                        <li><a href={''}>Cart</a></li>
+                    </ul>
                     <img className='cart'
                          src='images/cart.svg'
                          alt='Изображение корзины'/>
-                </section>
+                </nav>
             </div>
             <Line/>
             <p className='back_text'>Goods4you</p>
