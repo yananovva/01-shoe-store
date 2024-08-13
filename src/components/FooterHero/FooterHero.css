@@ -1,9 +1,14 @@
 .footer_hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     margin: 0 auto;
+    padding-left: 280px;
+    padding-top: 35px;
+}
+
+.hero__section {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
 }
 
 .footer__text {
@@ -15,29 +20,28 @@
 
 .question {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    gap: 700px;
     width: 100%;
     margin: 10px 0;
 }
 
-.plus {
+.footer__image {
     width: 25px;
     height: 25px;
     cursor: pointer;
     transition: transform 0.3s;
 }
 
-.plus.rotate {
+.footer__image.rotate {
     transform: rotate(45deg);
 }
 
 .answer {
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     max-height: 0;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    margin-bottom: 40px;
 }
 
 .answer.open {
@@ -49,4 +53,5 @@
     font-size: 16px;
     line-height: 24px;
 }
+
 

@@ -1,9 +1,10 @@
-/*.line {*/
-/*    border: 1px solid #FFFFFF;*/
-/*    width: 880px;*/
-/*}*/
+.line {
+    border: 1px solid #FFFFFF;
+    width: 880px;
+}
 
-/*!*.line_header {*!*/
-/*!*    color: rgba(255, 255, 255, 0.5);*!*/
-/*!*    width: 1180px;*!*/
-/*}*/
+.line_header {
+    width: 1180px;
+    border: 1px solid #FFFFFF;
+}
+
