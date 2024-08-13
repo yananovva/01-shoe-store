@@ -1,0 +1,27 @@
+.footer {
+    background: #444B58;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    width: 100%;
+    height: 80px;
+
+}
+
+.footer__navigation:hover {
+    color: #C4C4C4;
+}
+
+.footer__navigation {
+    display: flex;
+    align-items: center;
+    padding-left: 130px;
+    gap: 896px;
+}
+
+.menu__link {
+    display: flex;
+    gap: 33px;
+}

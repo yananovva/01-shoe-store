@@ -1,0 +1,57 @@
+.footer_hero {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 280px;
+    padding-top: 35px;
+}
+
+.hero__section {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.footer__text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    flex-grow: 1;
+}
+
+.question {
+    display: flex;
+    gap: 700px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.footer__image {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.footer__image.rotate {
+    transform: rotate(45deg);
+}
+
+.answer {
+    width: 100%;
+    /*overflow: hidden;*/
+    max-height: 0;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    margin-bottom: 40px;
+}
+
+.answer.open {
+    max-height: 100px;
+    padding: 10px 0;
+}
+
+.hero__small_text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
