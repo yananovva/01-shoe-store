@@ -5,11 +5,11 @@ import {MainProps} from "./Main.props";
 
 import styles from './Main.module.css';
 
-function Main({children}: MainProps) {
+function Main({catalog}: MainProps) {
     return (
         <div className={styles['main']}>
             <div className={styles['main__head']}>
-                <h1 className={styles['logo logo_black']}>Catalog</h1>
+                <h1 className={styles['logo logo_black']}>{catalog}</h1>
                 <div className={styles['main__search']}>
                     <Input/>
                     <Button/>

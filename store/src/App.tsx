@@ -20,20 +20,39 @@ function App() {
 
     return (
         <>
-            <HeaderHero/>
-            <Main>
-                <Button onClick={addCounter}>Go to shopping</Button>
+            <HeaderHero
+                logoText="Goods4you"
+                catalog="Catalog"
+                faq="FAQ"
+                cart="Cart"
+                cartIconSrc="../../../public/cart.svg"
+                logoBack="Goods4you"
+                bigText="Any products from famous brands<br/>
+                    with worldwide delivery"
+                smallText="We sell smartphones, laptops, clothes, shoes<br/>
+                    and many other products at low prices"
+            />
+            <Button onClick={addCounter}>Go to shopping</Button>
+            <Main catalog="Catalog">
                 <Input placeholder='Search by title'/>
                 <Button onClick={addCounter}>Search</Button>
-                <Products src="/public/image-shoe.png" name="Essence Mascara Lash Princess" price="110 $">
+                <Products src="/public/image-shoe.png"
+                          name="Essence Mascara Lash Princess"
+                          price="110 $">
                     <Button onClick={addCounter}>Show more</Button>
                 </Products>
             </Main>
-            <FooterHero></FooterHero>
-            <Footer logoText="Goods4you" catalog="Catalog" faq="FAQ">
-                {/*<p>Catalog</p>*/}
-                {/*<p>FAQ</p>*/}
-            </Footer>
+            <FooterHero
+                bigFaq="FAQ"
+                question="Question 1"
+                question2="Question 2"
+                questionText="Long answer to the first question"
+                plusIcon="../../../public/plus_icon.svg"
+            />
+            <Footer logoText="Goods4you"
+                    catalog="Catalog"
+                    faq="FAQ"
+            />
         </>
     );
 }

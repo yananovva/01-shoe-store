@@ -1,5 +1,10 @@
-import {ReactNode} from "react";
-
 export interface HeaderHeroProps {
-children?: ReactNode;
+    logoText: string;
+    catalog: string;
+    faq: string;
+    cart: string;
+    cartIconSrc: string;
+    logoBack: string;
+    bigText: string;
+    smallText: string;
 }

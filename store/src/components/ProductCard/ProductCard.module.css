@@ -1,0 +1,43 @@
+.main {
+    background: #FFFFFF;
+    height: 1270px;
+    width: 100%;
+}
+
+
+.desc_head {
+    display: flex;
+    gap: 450px;
+}
+
+
+.puma_photo {
+    width: 520px;
+    height: 558px;
+    border: 3px solid #C4C4C4;
+}
+
+
+.puma_product {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    padding-left: 131px;
+    padding-bottom: 109px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    color: #444B58;
+}
+
+span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #B2B5BB;
+}
+
+
