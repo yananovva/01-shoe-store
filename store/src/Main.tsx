@@ -1,18 +1,20 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, defer, RouterProvider} from "react-router-dom";
 
 import {Error} from "./pages/Error";
-import {MainPage} from "./pages/MainPage";
 import {Cart} from "./pages/Cart";
+import {Product} from "./pages/Product";
 import {Catalog} from "./pages/Catalog";
 import {FAQ} from "./pages/FAQ";
 import {HeaderHeroLayout} from "./layout/HeaderHero.layout";
-import {Product} from "./pages/Product";
+import axios from "axios";
+import {PREFIX} from "./helpers/API";
 
 import './index.css';
 
 
+const MainPage = lazy(() => import('./pages/MainPage'));
 
 const router = createBrowserRouter([
 
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <MainPage/>
+                element: <Suspense fallback={<>Загрузка... </>}><MainPage/></Suspense>
             },
             {
                 path: '/catalog',
@@ -42,8 +44,21 @@ const router = createBrowserRouter([
             },
             {
                 path: '/product/:id',
-                element: <Product/>
-            },
+                element: <Product/>,
+                errorElement: <>Ошибка</>,
+                loader: async ({ params}) => {
+                    return defer({
+                        data: axios.get(`${PREFIX}/api/${params.id}`).then(data => data)
+                    });
+                //     await new Promise<void>((resolve) => {
+                //         setTimeout(() => {
+                //             resolve();
+                //         }, 2000);
+                //     });
+                //     const {data} = await axios.get(`${PREFIX}/api/${params.id}`);
+                //     return data;
+                }
+            }
         ]
     },
 ]);
