@@ -10,6 +10,7 @@ import {FAQ} from "./pages/FAQ";
 import {HeaderHeroLayout} from "./layout/HeaderHero.layout";
 import axios from "axios";
 import {PREFIX} from "./helpers/API";
+import App from "./App";
 
 import './index.css';
 
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Suspense fallback={<>Загрузка... </>}><MainPage/></Suspense>
+                element: <Suspense fallback={<>Загрузка... </>}><App/></Suspense>
             },
             {
                 path: '/catalog',
@@ -50,13 +51,6 @@ const router = createBrowserRouter([
                     return defer({
                         data: axios.get(`${PREFIX}/api/${params.id}`).then(data => data)
                     });
-                //     await new Promise<void>((resolve) => {
-                //         setTimeout(() => {
-                //             resolve();
-                //         }, 2000);
-                //     });
-                //     const {data} = await axios.get(`${PREFIX}/api/${params.id}`);
-                //     return data;
                 }
             }
         ]

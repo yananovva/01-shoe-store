@@ -11,7 +11,7 @@ export function HeaderHero(props: HeaderHeroProps) {
     return (
         <div className={styles['hero header_hero']}>
             <div className={styles['header__navigation']}>
-                <NavLink to='/' className={({isActive}) => cn(styles['logo'], {
+                <NavLink to='/' className={({isActive}) => cn(styles['logo_type'], {
                     [styles.active]: isActive
                 })}>{props.logoText}
                 </NavLink>

@@ -27,9 +27,9 @@ function App() {
                 cart="Cart"
                 cartIconSrc="../../../public/cart.svg"
                 logoBack="Goods4you"
-                bigText="Any products from famous brands<br/>
+                bigText="Any products from famous brands
                     with worldwide delivery"
-                smallText="We sell smartphones, laptops, clothes, shoes<br/>
+                smallText="We sell smartphones, laptops, clothes, shoes
                     and many other products at low prices"
             />
             <Button onClick={addCounter}>Go to shopping</Button>
