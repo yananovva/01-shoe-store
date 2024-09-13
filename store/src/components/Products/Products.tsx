@@ -3,6 +3,7 @@ import styles from './Products.module.css';
 import {useEffect, useState} from "react";
 import axios, {AxiosError} from "axios";
 import {PREFIX} from "../../helpers/API";
+import {LoadingSkeleton} from "../LoadingSkeleton/LoadingSkeleton";
 
 export function Products({src, name, price}: ProductsProps) {
     const [api, setApi] = useState<ProductsProps[]>([]);
@@ -36,6 +37,8 @@ export function Products({src, name, price}: ProductsProps) {
     }, []);
 
 
+
+
     const products = [
         {src: "/public/image-shoe.png", name: "Essence Mascara Lash Princess", price: "110 $"},
         {src: "/public/image-shoe.png", name: "Essence Mascara Lash Princess", price: "110 $"},
@@ -47,6 +50,8 @@ export function Products({src, name, price}: ProductsProps) {
         {src: "/public/image-shoe.png", name: "Essence Mascara Lash Princess", price: "110 $"},
         {src: "/public/image-shoe.png", name: "Essence Mascara Lash Princess", price: "110 $"},
     ];
+
+
 
     return (
         <div className={styles['products']}>
@@ -63,7 +68,7 @@ export function Products({src, name, price}: ProductsProps) {
                             <button className={styles['cart__image']}>
                                 <img src="/store/public/control.svg" alt="Кнопка добавления в корзину"/>
                             </button>
-                            {isLoading && <>Загрузка...</>}
+                            <LoadingSkeleton data={}/>
                         </div>
                     </div>
                 ))}
